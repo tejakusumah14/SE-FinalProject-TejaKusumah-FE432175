@@ -1,0 +1,31 @@
+			PSEUDECODE
+=====================================================
+NAMA  : TEJA KUSUMAH - FE432175
+JUDUL : PROSES ORDER MAKANAN ATAU MINUMAN VIA ONLINE
+=====================================================
+
+
+PROGRAM Online_FoodAndDrink_Order
+VAR RestaurantName
+
+START
+READ INPUT Menu RestaurantName
+FOR Restaurant IN ListOfResturant
+	IF Resturant INCLUDE RestaurantName
+		SHOW Restaurant
+READ INPUT ChooseRestaurant
+SHOW MenuList WHERE Restaurant = ChooseResturant
+WHILE UserNotFinish
+	READ INPUT SelectedMenu
+	ADD SelectedMenu To Cart
+READ INPUT UserAddress
+SHOW BillAmount
+BillPaid = FALSE
+WHILE BillPaid NOT TRUE
+	READ INPUT PaymentMethod
+	READ INPUT Payment
+	IF Payment IS VALID
+		BillPaid = TRUE
+		ProcessingDelivery
+END
+
